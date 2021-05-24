@@ -1,0 +1,27 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ModelDemo</title>
+</head>
+<body>
+    <h3>Employee Data</h3>
+    @*@ViewBag.emp.EmpId <br />
+        @ViewBag.emp.EmpName <br />
+        @ViewBag.emp.Salary <br />*@
+
+    @{
+        Employee emp = ViewData["emp"] as Employee;
+    }
+    @emp.EmpId <br />
+    @emp.EmpName <br />
+    @emp.Salary <br />
+
+</body>
+</html>
