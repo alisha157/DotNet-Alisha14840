@@ -1,0 +1,36 @@
+﻿@model Attendee
+@{
+    ViewData["Title"] = "AttendeeForm";
+}
+
+<h1>RegistrationForm</h1>
+
+<form asp-controller="Assignment" asp-action="DisplayAttendeeData" method="post">
+    <div asp-validation-summary="All" class="text text-danger"></div>
+
+    Name : <input type="text" asp-for="Name" class="form-control" />
+    <span asp-validation-for="Name"></span>
+    <br />
+
+    Email : <input type="email" asp-for="Email " class="form-control" />
+    <span asp-validation-for="Email"></span>
+    <br />
+
+    Phone :<input type="tel" asp-for="Phone" class="form-control" />
+    <span asp-validation-for="Phone"></span>
+    <br />
+
+    <div>
+        WillAttend
+        <span asp-validation-for="WillAttend"></span>
+
+        <span asp-validation-for="WillAttend"></span>
+        <select asp-for="WillAttend" class="form-control" aria-labelledby="btnDropdownDemo">
+            <option selected disabled>---Confirmation---</option>
+            <option class="dropdown-item" value="Yes">Yes</option>
+            <option class="dropdown-item" value="No">No</option>
+        </select>
+    </div>
+    <br />
+    <button type="submit" class="btn btn-outline-success">Submit</button>
+</form>
